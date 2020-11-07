@@ -28,7 +28,7 @@ public class LoginController {
         String password = user.getPassword();
         LoginResult loginResult = loginService.login(userName,password);
         if(loginResult.isLogin()){
-            return "登录成功";
+            return "登录成功: " + loginResult.getResult();
         } else {
             return "登录失败：" + loginResult.getResult();
         }
